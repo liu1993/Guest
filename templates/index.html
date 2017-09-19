@@ -5,6 +5,14 @@
     <title>Django Page</title>
 </head>
 <body>
-    <h1>!!!!</h1>
+    <h1>发布会管理</h1>
+    <form method="post" action="/login_action/">
+        <input name="username" type="text" placeholder="username"><br>
+        <input name="password" type="password" placeholder="password"><br>
+        {{ error }}<br>
+        <button id="btn_login" type="submit">登录</button>
+{# 模板标签 添加csrf验证 #}
+        {% csrf_token %}
+    </form>
 </body>
 </html>
