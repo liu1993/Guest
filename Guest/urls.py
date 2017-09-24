@@ -17,8 +17,10 @@ from django.conf.urls import url
 from django.contrib import admin
 from sign import views
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls),#后台管理页面
+    url(r'^$',views.index),#根目录
     url(r'^index/',views.index),
     url(r'^login_action/$',views.login_aciton),
-    url(r'^event_manage/',views.event_manage)
+    url(r'^event_manage/',views.event_manage),
+    url(r'^accounts/login/$',views.index)#尝试未登录直接到达登陆成功页面弹出的错误页面，引导用户至登录页面
 ]
