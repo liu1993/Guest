@@ -28,7 +28,7 @@ def login_aciton(request):
         else:
             return render(request,'index.html',{'error':'username or password error!'})
 
-@login_required
+# @login_required
 def event_manage(request):
     event_list = Event.objects.all()
     # username = request.COOKIES.get('user','')#读取浏览器cookie
